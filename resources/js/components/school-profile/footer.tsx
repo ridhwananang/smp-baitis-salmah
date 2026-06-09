@@ -1,20 +1,36 @@
 import { Link } from '@inertiajs/react';
-import { GraduationCap, Mail, MapPin, Phone, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Twitter, Youtube } from 'lucide-react';
 import React from 'react';
+
+const Tiktok = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        {...props}
+    >
+        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+);
 
 export default function Footer() {
     const socialLinks = [
-        { icon: Facebook, href: '#', color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
-        { icon: Instagram, href: '#', color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
-        { icon: Twitter, href: '#', color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
-        { icon: Youtube, href: '#', color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
+        { icon: Tiktok, href: 'https://www.tiktok.com/@baitissalmah4?_r=1&_t=ZS-974N9VPAuSv', color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
+        { icon: Instagram, href: 'https://www.instagram.com/mtsbaitissalmah?igsh=MWY0N3VpOGdqYzg2NQ==', 
+            color: 'hover:text-darkkhaki hover:bg-darkkhaki/10' },
+        
     ];
 
     const navLinks = [
         { label: 'Home', href: '/' },
-        { label: 'Kurikulum', href: '/kurikulum' },
-        { label: 'Ekstrakurikuler', href: '/ekstrakurikuler' },
         { label: 'Profile', href: '/profile' },
+        { label: 'Fasilitas & Program Pembiasaan', href: '/kurikulum' },
+        { label: 'Ekstrakurikuler', href: '/ekstrakurikuler' },
+        
     ];
 
     return (
@@ -35,22 +51,21 @@ export default function Footer() {
                             />
                             <div>
                                 <span className="text-lg font-bold tracking-tight text-foreground block leading-none transition-colors group-hover:text-darkkhaki">
-                                    SMA UNGGUL
+                                    MTs Baitis Salmah
                                 </span>
-                                <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-widest block mt-0.5">
-                                    Nusantara
-                                </span>
+                                
                             </div>
                         </Link>
                         
                         <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm">
-                            Mencetak generasi cerdas, berintegritas tinggi, dan berwawasan global. Siap menyongsong masa depan cerah melalui ekosistem pendidikan berstandar tinggi.
+                            "Madrasah yang unggul dan populis untuk mencetak generasi berprestasi serta berakhlak mulia"
                         </p>
                         
                         {/* Social Media Links */}
                         <div className="flex items-center gap-3 pt-2">
                             {socialLinks.map((social, idx) => {
                                 const Icon = social.icon;
+
                                 return (
                                     <a
                                         key={idx}
@@ -91,15 +106,15 @@ export default function Footer() {
                         <ul className="space-y-3.5 text-xs sm:text-sm text-muted-foreground">
                             <li className="flex gap-3 items-start">
                                 <MapPin className="h-5 w-5 text-darkkhaki shrink-0 mt-0.5" />
-                                <span>Jl. Pendidikan Raya No. 45, Kebayoran Baru, Jakarta Selatan, 12130</span>
+                                <span>Jl. Masjid Baitis Salmah CIPUTAT, Sawah Baru, Kec. Ciputat, Kota Tangeang Selatan</span>
                             </li>
                             <li className="flex gap-3 items-center">
                                 <Phone className="h-4.5 w-4.5 text-darkkhaki shrink-0" />
-                                <span>+62 21-724-5678</span>
+                                <span>+62 21-2762-2083</span>
                             </li>
                             <li className="flex gap-3 items-center">
                                 <Mail className="h-4.5 w-4.5 text-darkkhaki shrink-0" />
-                                <span>info@smaunggulnusantara.sch.id</span>
+                                <span> ybs.mts.baitis.salmah@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -109,10 +124,7 @@ export default function Footer() {
                 {/* Bottom Bar: Copyright */}
                 <div className="mt-12 pt-8 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-muted-foreground text-center sm:text-left">
-                        © {new Date().getFullYear()} SMA Unggul Nusantara. All Rights Reserved.
-                    </p>
-                    <p className="text-[10px] text-muted-foreground tracking-wide text-center sm:text-right">
-                        Website didesain secara Profesional, Modern, dan Responsif.
+                        © {new Date().getFullYear()} MTs Baitis Salmah. All Rights Reserved.
                     </p>
                 </div>
             </div>

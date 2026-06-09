@@ -1,9 +1,11 @@
+import { Head } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
+
+import { Award,ArrowRight, CheckCircle2, GraduationCap, History, Lightbulb, MapPin, Shield, Users } from 'lucide-react';
+import React, { useState } from 'react';
 import Footer from '@/components/school-profile/footer';
 import Navbar from '@/components/school-profile/navbar';
 import { Button } from '@/components/ui/button';
-import { Head } from '@inertiajs/react';
-import { Award, Calendar, CheckCircle2, GraduationCap, History, Lightbulb, MapPin, Shield, Users } from 'lucide-react';
-import React, { useState } from 'react';
 
 type TabType = 'visi' | 'misi' | 'nilai';
 
@@ -17,24 +19,59 @@ export default function ProfilePage() {
     ];
 
     const missionItems = [
-        'Menyelenggarakan pendidikan menengah berkualitas tinggi yang memadukan kurikulum nasional dan standar global.',
-        'Menerapkan pembelajaran inovatif berbasis riset (research-based learning) dan pemanfaatan teknologi kecerdasan buatan.',
-        'Membina akhlak mulia melalui pembiasaan kedisiplinan, nilai religius, dan wawasan kebinekaan global.',
-        'Mendorong pencapaian prestasi akademik dan non-akademik di tingkat nasional maupun internasional.',
-        'Membangun jejaring kolaborasi dengan universitas kelas dunia untuk mempersiapkan kelulusan siswa.'
+        'Meningkatkan dan mengembangkan prestasi peserta didik secara akademik dan non akademik.',
+        'Menumbuh kembangkan mental profesional, akhlak mulia, kreatif dan inovatif yang berwawasan maju.',
+        'Mengembangkan sikap disiplin yang berkarakter.',
+        'Menanamkan keimanan dan ketaqwaan peserta didik serta mengamalkan ajaran agama dalam kehidupan sehari-hari.',
+        
     ];
 
-    const milestones = [
-        { year: '2018', title: 'Sekolah Didirikan', desc: 'SMA Unggul Nusantara resmi dibuka dengan kurikulum berbasis sains terpadu.' },
-        { year: '2021', title: 'Akreditasi A & Rujukan', desc: 'Meraih akreditasi A BAN-S/M dengan nilai sangat memuaskan, serta ditunjuk menjadi sekolah model rujukan.' },
-        { year: '2024', title: 'Sertifikasi Cambridge', desc: 'Resmi mengintegrasikan Cambridge Assessment International Education pada peminatan MIPA.' },
-        { year: '2026', title: 'AI Center & Eco School', desc: 'Peluncuran laboratorium kecerdasan buatan terpadu dan penghargaan nasional green campus.' }
-    ];
+    
 
     return (
         <>
+       <section
+    id="home"
+    className="relative flex min-h-screen items-center overflow-hidden bg-cover bg-center bg-no-repeat"
+    style={{
+        backgroundImage: "url('/images/fotosekolah.jpeg')",
+    }}
+>
+           
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 z-10 bg-black/60" />
+
+            {/* Grid Overlay */}
+            <div className="absolute inset-0 z-10 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
+
+            {/* Blur Effects */}
+            <div className="absolute top-1/4 left-1/4 z-10 h-72 w-72 rounded-full bg-khaki/10 blur-3xl" />
+            <div className="absolute right-1/4 bottom-1/4 z-10 h-96 w-96 rounded-full bg-darkkhaki/10 blur-3xl" />
+
+            {/* Content */} 
+            <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-5xl text-center">
+                    <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-6xl">
+                        Profil &{' '}
+                        <span className="bg-gradient-to-r from-darkkhaki via-khaki to-darkkhaki bg-clip-text text-transparent">
+                            Sejarah Singkat 
+                        </span>{' '}
+                        Sekolah
+                    </h1>
+
+                    <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/80 sm:text-xl">
+                        Selamat datang di MTs Baitis Salmah. dibangun atas dasar keyakinan, bahwa proses pendidikan bertolak dari
+                        dan menuju fitrah manusia yang hakiki sebagai mahkluk Allah SWT.
+                    </p>
+
+                    
+
+                </div>
+            </div>
+        </section>
             <Head>
-                <title>Profil Sekolah - SMA Unggul Nusantara</title>
+                <title>Profil Sekolah - MTs Baitis Salmah</title>
                 <meta name="description" content="Ketahui visi, misi, nilai utama, dan sejarah berdirinya SMA Unggul Nusantara." />
             </Head>
 
@@ -42,37 +79,9 @@ export default function ProfilePage() {
                 {/* Navbar Component */}
                 <Navbar />
 
-                <main className="flex-grow pt-24 pb-16">
+                <main className="flex-grow pt-14 pb-16">
                     {/* Header Banner Section */}
-                    <section className="bg-gradient-to-br from-khaki/10 via-darkkhaki/5 to-khaki/5 py-16 px-4 border-b border-border/30 relative overflow-hidden">
-                        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -z-10 h-64 w-64 rounded-full bg-darkkhaki/5 blur-3xl" />
-                        <div className="container mx-auto max-w-6xl">
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                                {/* Left Content */}
-                                <div className="lg:col-span-7 space-y-4 text-left">
-                                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-darkkhaki/20 bg-darkkhaki/5 text-darkkhaki text-xs font-semibold">
-                                        <GraduationCap className="h-3 w-3" />
-                                        TENTANG SMA UNGGUL NUSANTARA
-                                    </div>
-                                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-tight">
-                                        Profil & Budaya Sekolah
-                                    </h1>
-                                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                                        Membina harmoni kecerdasan akademis, spiritual, dan integritas kepemimpinan sosial berlandaskan kearifan bangsa.
-                                    </p>
-                                </div>
-                                {/* Right Image Card */}
-                                <div className="lg:col-span-5 relative w-full aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden border border-border/40 bg-card p-2 shadow-lg">
-                                    <img 
-                                        src="/images/modern_school_campus.png" 
-                                        alt="Modern School Campus" 
-                                        className="w-full h-full object-cover rounded-xl"
-                                        loading="eager"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    
 
                     {/* Visi Misi Section (Flexbox) */}
                     <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-6xl">
@@ -89,25 +98,15 @@ export default function ProfilePage() {
                                         <p className="text-base font-medium text-foreground italic leading-relaxed pt-2">
                                             "Pendidikan sejati haruslah mengasah kecerdasan intelektual sekaligus membentuk kekuatan moral. Melalui kolaborasi seluruh tenaga pendidik, orang tua, dan murid, kami bertekad melahirkan lulusan berkarakter unggul yang siap menjadi pelopor kemajuan peradaban global."
                                         </p>
+                                        <div className="mt-8 flex justify-center">
+                                            <img
+                                            src="/images/guru.jpeg"
+                                            alt="Dr. H. Akhmad Fauzi, M.Pd."
+                                          className="w-full max-w-md rounded-2xl object-cover shadow-lg"
+                                         />
+                                            </div>
                                     </div>
                                     
-                                    <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border/50">
-                                        <div className="h-16 w-16 overflow-hidden rounded-2xl border border-border bg-muted shrink-0 shadow-md">
-                                            <img
-                                                src="/images/school_headmaster.png"
-                                                alt="Dr. H. Akhmad Fauzi, M.Pd."
-                                                className="h-full w-full object-cover"
-                                            />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-base font-bold text-foreground leading-snug">
-                                                Dr. H. Akhmad Fauzi, M.Pd.
-                                            </h4>
-                                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-0.5">
-                                                Kepala Sekolah
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -117,7 +116,7 @@ export default function ProfilePage() {
                                     
                                     {/* Tabs selection */}
                                     <div className="flex gap-2 p-1.5 rounded-2xl bg-muted/40 border border-border/40 mb-6 shrink-0">
-                                        {(['visi', 'misi', 'nilai'] as TabType[]).map((tab) => (
+                                        {(['visi', 'misi'] as TabType[]).map((tab) => (
                                             <button
                                                 key={tab}
                                                 onClick={() => setActiveTab(tab)}
@@ -141,7 +140,9 @@ export default function ProfilePage() {
                                                 </div>
                                                 <h4 className="text-xl font-bold text-foreground">Visi Sekolah</h4>
                                                 <p className="text-lg text-foreground font-medium leading-relaxed leading-[1.6]">
-                                                    "Menjadi pusat keunggulan pendidikan menengah di Asia Tenggara yang melahirkan pemimpin masa depan berkarakter Pancasila, berwawasan global, unggul dalam riset, serta menguasai sains dan teknologi terkini."
+                                                    "MTs. Baitis Salmah dibangun atas dasar keyakinan, bahwa proses pendidikan bertolak dari dan menuju fitrah manusia yang hakiki sebagai makhluk Allah SWT.
+                                                     Artinya, pendidikan merupakan proses pencarian jati diri manusia dan proses memanusiakan manusia. Pendidikan membangun kesadaran kepada manusia tentang; siapa yang menjadikan manusia itu ada, dari mana manusia itu berasal, dan apa tugas manusia di bumi ini? Dalam proses pendidikan manusia diposisikan dan diperlakukan sebagai manusia, yang memiliki potensi, ciri dan karakteristik yang unik. Maka dalam proses memanusiakan manusia itu harus sesuai dengan apa yang diperintahkan oleh Allah, yang menjadikan manusia itu ada. Oleh karena itu visi MTs. Baitis Salmah adalah :
+                                                     "Madrasah yang unggul dan populis untuk mencetak generasi berprestasi serta berakhlak mulia""
                                                 </p>
                                             </div>
                                         )}
@@ -166,6 +167,7 @@ export default function ProfilePage() {
                                                 <div className="grid grid-cols-1 gap-4">
                                                     {coreValues.map((val, idx) => {
                                                         const Icon = val.icon;
+
                                                         return (
                                                             <div key={idx} className="flex gap-4 p-3 rounded-2xl hover:bg-muted/20 transition-all border border-transparent hover:border-border/30">
                                                                 <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${val.color}`}>
@@ -191,69 +193,67 @@ export default function ProfilePage() {
                     <section className="bg-muted/20 py-16">
                         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                             <div className="text-center mb-16 space-y-4">
+                                
                                 <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-darkkhaki/10 text-darkkhaki">
                                     <History className="h-5 w-5" />
                                 </div>
                                 <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
-                                    Rekam Jejak & Milestones Sekolah
+                                    Sejarah Singkat Sekolah
                                 </h2>
-                                <p className="text-muted-foreground text-sm max-w-md mx-auto">
-                                    Sejarah perjalanan kami dalam mengukir prestasi dan membangun sarana belajar yang berkelanjutan.
-                                </p>
+                                <h1 className="text-muted-foreground text-xl w-full mx-auto">
+                                    MTs. Baitis Salmah didirikan oleh Yayasan Baitis Salmah pada tahun 1984. Yayasan Baitis Salmah merupakan wakaf dari Bapak H. Ali Muhammad, seorang pengusaha yang tinggal di Jakarta.
+                                    Pada mulanya Yayasan Baitis Salmah hanya membawahi masjid Baitis Salmah dan Madrasah Ibtidaiyah (MI) Baitis Salmah. Namun melihat realitas bahwa ketika itu banyak lulusan SD/MI di sekitar wilayah Tegal rotan yang tidak tertampung di sekolah lanjutan tingkat pertama yang letaknya jauh dan sulit terjangkau dengan transportasi, maka Yayasan berinisiatif untuk mendirikan Madrasah Tsanawiyah (MTs) guna menampung para lulusan tersebut.
+                                    Tahun ajaran 1984/1985 MTs Baitis Salmah untuk pertama kalinya menerima siswa baru dengan jumlah 29 siswa. Kini siswa siswi MTs. Baitis Salmah berjumlah 110 siswa.
+                                </h1>
                             </div>
 
-                            {/* Milestone Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                                {milestones.map((milestone, idx) => (
-                                    <div key={idx} className="bg-card border border-border/40 rounded-3xl p-6 shadow-xs relative flex flex-col justify-between hover:border-darkkhaki/30 transition-all duration-300">
-                                        <div className="space-y-4">
-                                            <span className="text-3xl font-extrabold text-darkkhaki block">
-                                                {milestone.year}
-                                            </span>
-                                            <h4 className="text-base font-bold text-foreground">
-                                                {milestone.title}
-                                            </h4>
-                                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                                {milestone.desc}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                            
                         </div>
                     </section>
 
                     {/* Location Info & Map preview */}
-                    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-4xl">
-                        <div className="rounded-3xl border border-border/50 bg-card p-6 sm:p-8 shadow-xl flex flex-col md:flex-row gap-8 items-center">
-                            <div className="flex-1 space-y-4 text-left">
-                                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-darkkhaki/10 text-darkkhaki">
-                                    <MapPin className="h-5 w-5" />
-                                </div>
-                                <h3 className="text-xl font-bold text-foreground">Lokasi Strategis Kampus</h3>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                    Kampus SMA Unggul Nusantara terletak di kawasan asri Kebayoran Baru, Jakarta Selatan. Aksesibilitas mudah dijangkau dengan transportasi umum maupun kendaraan pribadi.
-                                </p>
-                                <div className="text-xs text-muted-foreground font-semibold">
-                                    Alamat: Jl. Pendidikan Raya No. 45, Kebayoran Baru, Jakarta Selatan, 12130
-                                </div>
-                            </div>
-                            <div className="flex-1 w-full aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-md bg-muted relative">
-                                {/* Simulated static map design */}
-                                <div className="absolute inset-0 bg-sky-200/20 flex items-center justify-center p-4">
-                                    <div className="text-center space-y-2">
-                                        <MapPin className="h-10 w-10 text-darkkhaki mx-auto animate-bounce" />
-                                        <span className="text-xs font-bold text-foreground">Kebayoran Baru, Jaksel</span>
-                                        <Button size="sm" variant="outline" className="text-[10px] py-1 px-2 h-7 bg-background border-border hover:bg-muted cursor-pointer" asChild>
-                                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
-                                                Buka Google Maps
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                 <section className="container mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="rounded-3xl border border-border/50 bg-card p-6 shadow-xl sm:p-8">
+        {/* Header */}
+        <div className="space-y-4">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-darkkhaki/10 text-darkkhaki">
+                <MapPin className="h-5 w-5" />
+            </div>
+
+            <h3 className="text-2xl font-bold text-foreground">
+                Lokasi Strategis Sekolah
+            </h3>
+
+            <p className="leading-relaxed text-muted-foreground">
+                MTs Baitis Salmah berada di kawasan Bintaro, Tangerang Selatan.
+                Aksesibilitas mudah dijangkau dengan transportasi umum maupun
+                kendaraan pribadi.
+            </p>
+
+            <div className="rounded-xl bg-muted/50 p-4">
+                <p className="text-sm font-semibold text-foreground">
+                    Alamat Sekolah
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Jl. Masjid Baitis Salmah, Sawah Baru, Kec. Ciputat,
+                    Kota Tangerang Selatan, Banten 15413
+                </p>
+            </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-md">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8591589064076!2d106.71840259999999!3d-6.282238899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f00b23a9868f%3A0xe74f55a1a9bb202a!2sMasjid%20Baitis%20Salmah!5e0!3m2!1sen!2sid!4v1780938384459!5m2!1sen!2sid"
+                className="h-[450px] w-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+            />
+        </div>
+    </div>
+</section>
                 </main>
 
                 {/* Footer Component */}

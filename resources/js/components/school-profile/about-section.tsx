@@ -133,6 +133,7 @@ export default function AboutSection() {
                                         <div className="grid grid-cols-1 gap-4">
                                             {coreValues.map((val, idx) => {
                                                 const Icon = val.icon;
+
                                                 return (
                                                     <div key={idx} className="flex gap-4 p-3 rounded-2xl hover:bg-muted/20 transition-all border border-transparent hover:border-border/30">
                                                         <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${val.color}`}>

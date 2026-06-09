@@ -1,16 +1,16 @@
-import AcademicsSection from '@/components/school-profile/academics-section';
-import Footer from '@/components/school-profile/footer';
-import Navbar from '@/components/school-profile/navbar';
 import { Head } from '@inertiajs/react';
 import { BookOpen } from 'lucide-react';
 import React from 'react';
+import AcademicsSection from '@/components/school-profile/academics-section';
+import Footer from '@/components/school-profile/footer';
+import Navbar from '@/components/school-profile/navbar';
 
 export default function KurikulumPage() {
     return (
         <>
             <Head>
-                <title>Kurikulum & Akademis - SMA Unggul Nusantara</title>
-                <meta name="description" content="Struktur kurikulum nasional dan kompetensi global di SMA Unggul Nusantara." />
+                <title>Fasilitas & Program Pembiasaan - MTs Baitis Salmah</title>
+                <meta name="description" content="Informasi mengenai fasilitas lengkap dan program pembiasaan karakter Islami di MTs Baitis Salmah." />
             </Head>
 
             <div className="min-h-screen bg-background text-foreground antialiased font-sans flex flex-col justify-between">
@@ -24,13 +24,13 @@ export default function KurikulumPage() {
                         <div className="container mx-auto text-center max-w-4xl space-y-4">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-darkkhaki/20 bg-darkkhaki/5 text-darkkhaki text-xs font-semibold">
                                 <BookOpen className="h-3 w-3" />
-                                STRUKTUR AKADEMIK SEKOLAH
+                                FASILITAS & PROGRAM PEMBIASAAN
                             </div>
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
-                                Kurikulum SMA Unggul Nusantara
+                                Fasilitas & Program Pembiasaan Sekolah
                             </h1>
                             <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-                                Memadukan kurikulum nasional Merdeka Belajar dengan pengayaan global bilingual sains dan matematika untuk menghasilkan lulusan siap kompetisi.
+                                MTs Baitis Salmah menyediakan infrastruktur pendukung belajar yang memadai dan program pembiasaan karakter keagamaan yang terstruktur untuk mencetak lulusan berakhlak mulia.
                             </p>
                         </div>
                     </section>
